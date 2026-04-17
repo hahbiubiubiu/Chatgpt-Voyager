@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/background/index.ts"],
+  "sourcesContent": ["chrome.runtime.onInstalled.addListener((details) => {\n  const reason = details.reason ?? \"unknown\";\n  console.log(`[GPT Voyager] Extension installed/updated. reason=${reason}`);\n});\n\nchrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {\n  if (message?.type === \"GV_PING\") {\n    sendResponse({\n      ok: true,\n      timestamp: Date.now()\n    });\n    return true;\n  }\n  return false;\n});\n\n"],
+  "mappings": ";;;AAAA,SAAO,QAAQ,YAAY,YAAY,CAAC,YAAY;AAClD,UAAM,SAAS,QAAQ,UAAU;AACjC,YAAQ,IAAI,qDAAqD,MAAM,EAAE;AAAA,EAC3E,CAAC;AAED,SAAO,QAAQ,UAAU,YAAY,CAAC,SAAS,SAAS,iBAAiB;AACvE,QAAI,SAAS,SAAS,WAAW;AAC/B,mBAAa;AAAA,QACX,IAAI;AAAA,QACJ,WAAW,KAAK,IAAI;AAAA,MACtB,CAAC;AACD,aAAO;AAAA,IACT;AACA,WAAO;AAAA,EACT,CAAC;",
+  "names": []
+}
