@@ -1,6 +1,6 @@
 # GPT Voyager Plus
 
-`GPT Voyager Plus` 在 [GPT-Voyager](https://github.com/Duang777/GPT-Voyager) 的基础上修改。
+`GPT Voyager Plus` 在 [GPT-Voyager](https://github.com/Duang777/GPT-Voyager) 的基础上修改，当前适配 ChatGPT 与豆包网页聊天。
 
 新增功能：
 
